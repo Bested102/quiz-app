@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: 204, 228, 255;
+  --secondary-color: 18, 67, 116;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+main {
+  background-color: white;
+  border-radius: 10px;
+  width: clamp(280px, 600px, 98%);
+  border: 1px solid rgb(var(--main-color));
+  overflow: hidden;
+  box-shadow: 0 0 6px 2px rgba(51, 51, 51, 0.117);
+  margin-inline: 10px;
+}
+
+header {
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(var(--main-color));
+  font-weight: 500;
+}
+
+header .time {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 3px solid rgb(var(--main-color), .8);
+  border-radius: 50%;
+  width: 40px;
+  font-weight: 400;
+  margin-inline: auto 10px;
+}
+
+section {
+  text-align: center;
+  background-color: rgba(var(--main-color), .2);
+  padding: 15px;
+}
+
+.question {
+  font-family: serif;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+section .answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+section .answers input {
+  display: none;
+}
+
+section .answers label {
+  padding: 13px 10px;
+  border-radius: 8px;
+  border: 3px solid rgba(var(--main-color), .6);
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 500;
+  font-size: 14px;
+  user-select: none;
+}
+
+section .answers label:has(input[disabled]) {
+  cursor: default;
+}
+
+section .answers label:not(label:has(input[disabled])):hover {
+  border-color: rgba(var(--secondary-color), .85);
+  background-color: rgba(var(--main-color), .4);
+}
+
+section button {
+  background-color: rgba(var(--secondary-color));
+  border: none;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  opacity: .4;
+  transition: .3s;
+  scale: .96;
+}
+
+section button.active {
+  opacity: 1;
+  scale: 1;
+  cursor: pointer;
+}
+
+section .answers label.right {
+  border-color: green;
+  animation: pulse .5s alternate;
+  opacity: 1 !important;
+}
+
+section .answers label.wrong {
+  border-color: red;
+  animation: vibrate .4s alternate;
+  opacity: 1 !important;
+}
+
+@keyframes pulse {
+  50% {
+    scale: 1.05;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes vibrate {
+  25% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.result {
+  background-color: rgba(var(--main-color), .5);
+  border-radius: 10px;
+  aspect-ratio: 1;
+  margin-inline: 15px;
+  display: none;
+  place-items: center;
+  width: clamp(200px, 300px, 100%);
+}
+
+.result .circle {
+  background-color: white;
+  aspect-ratio: 1;
+  width: clamp(30px, 150px, 98%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+  border: 8px solid;
+}
+
+.result .circle.bad {
+  border-color: rgba(255, 0, 0, 0.7);
+  color: red;
+}
+
+.result .circle.good {
+  border-color: rgba(0, 128, 0, 0.7);
+  color: green;
+}
+
+.result .circle.decent {
+  border-color: rgba(255, 166, 0, 0.7);
+  color: orange;
+}
+
+.result .circle p {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+@media (max-width:560px) {
+  section .answers {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+}

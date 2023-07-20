@@ -1,0 +1,92 @@
+[
+  {
+    "title": "What does HTML stand for?",
+    "answers": [
+      "Hyper Text Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Home and Text Makeup Language"
+    ],
+    "right_answer": "Hyper Text Markup Language"
+  },
+  {
+    "title": "How can you make a list that lists the items with numbers?",
+    "answers": [
+      "<ol>",
+      "<ul>",
+      "<dl>",
+      "<list>"
+    ],
+    "right_answer": "<ol>"
+  },
+  {
+    "title": "What's the correct tag to type important text?",
+    "answers": [
+      "<b>",
+      "<strong>",
+      "<important>",
+      "<span>"
+    ],
+    "right_answer": "<strong>"
+  },
+  {
+    "title": "Choose the correct HTML tag for the largest heading.",
+    "answers": [
+      "<h6>",
+      "<header>",
+      "<h1>",
+      "<th>"
+    ],
+    "right_answer": "<h1>"
+  },
+  {
+    "title": "How to include an external page inside your page",
+    "answers": [
+      "<a href='' view='true'>",
+      "<load>",
+      "<iframe>",
+      "All choices are correct"
+    ],
+    "right_answer": "<iframe>"
+  },
+  {
+    "title": "Choose the HTML tag that doesn't exist",
+    "answers": [
+      "<object>",
+      "<basefont>",
+      "<abbr>",
+      "All choices are wrong"
+    ],
+    "right_answer": "All choices are wrong"
+  },
+  {
+    "title": "How to specify document type of HTML5 page",
+    "answers": [
+      "<DOCTYPE html>",
+      "<DOCTYPE html5>",
+      "<!DOCTYPE html5>",
+      "<!DOCTYPE html>"
+    ],
+    "right_answer": "<!DOCTYPE html>"
+  },
+  {
+    "title": "What is the correct HTML for creating a hyperlink?",
+    "answers": [
+      "<a url='http://www.google.com'> Google</a>",
+      "<a href='http://www.google.com'> Google</a>",
+      "<a value='http://www.google.com'> Google</a>",
+      "<a text='Google'> http://www.google.com</a>"
+    ],
+    "right_answer": "<a href='http://www.google.com'> Google</a>"
+  },
+  {
+    "title": "Choose the correct syntax for making attributes",
+    "answers": [
+      "<div class='class-name'>",
+      "<div class=class-name>",
+      "<div class=\"class-name\">",
+      "All choices are correct"
+    ],
+    "right_answer": "All choices are correct"
+  }
+]
